@@ -28,7 +28,7 @@ Module client
 			Do
 				bytes = socket.Receive(data, data.Length, 0)
 				builder.Append(Encoding.Unicode.GetString(data, 0, bytes))
-			Loop While (Socket.Available > 0)
+			Loop While (socket.Available > 0)
 			Console.WriteLine("ответ сервера: " & builder.ToString())
 
 			' закрываем сокет
