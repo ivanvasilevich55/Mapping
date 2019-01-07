@@ -1,4 +1,4 @@
-﻿Module Module1
+﻿Module client
 
 	Sub Main()
 

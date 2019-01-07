@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DDAF9035-7DE6-4CC5-B1EE-69946A47E089}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <StartupObject>ConsoleServerTCP_IP.Module1</StartupObject>
+    <StartupObject>ConsoleServerTCP_IP.server</StartupObject>
     <RootNamespace>ConsoleServerTCP_IP</RootNamespace>
     <AssemblyName>ConsoleServerTCP-IP</AssemblyName>
     <FileAlignment>512</FileAlignment>
@@ -67,7 +67,7 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module1.vb" />
+    <Compile Include="server.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
