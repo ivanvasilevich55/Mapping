@@ -12,6 +12,7 @@ Module server
 		Dim ipPoint As New IPEndPoint(IPAddress.Parse("127.0.0.1"), port)
 		Dim listenSocket As New Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp)
 		Try
+			listenSocket.Bind(ipPoint)
 			listenSocket.Listen(10)
 			Console.WriteLine("Сервер запущен. Ожидание подключений...")
 			While (True)
@@ -24,7 +25,7 @@ Module server
 					builder.Append(Encoding.Unicode.GetString(data, 0, bytes))
 				Loop While (handler.Available > 0)
 				Console.WriteLine(DateTime.Now.ToShortTimeString() & ": " & builder.ToString())
-				Dim message As String = "Ваше сообщение"
+				Dim message As String = "Ваше сообщение доставленно"
 				data = Encoding.Unicode.GetBytes(message)
 				handler.Send(data)
 				handler.Shutdown(SocketShutdown.Both)
